@@ -6,7 +6,6 @@ const aggregateHeartRate = (data) => {
     let i = 0;
     let output = []
     while (i < heartRateData.length) {
-        console.log(i);
         let intervalStart = new Date(heartRateData[i].on_date);
         let intervalEnd = new Date(heartRateData[i].on_date);
         intervalEnd.setMinutes(intervalEnd.getMinutes() + interval);

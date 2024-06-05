@@ -4,15 +4,20 @@ const responseHelper=require('../../helpers/response.helper');
 const responseMessageHelper=require('../../helpers/response_message.helper')
 const logger = require('../../utils/logger');
 const batchSize = 100;
+const path = require('path');
+
 module.exports.processHeartRateData = (req, res) => {
     try {
-        fs.readFile('data.json', 'utf8', (err, data) => {
+        if (!req.file)
+            return responseHelper.badRequestError(res, 'Please select a file to upload')
+        let filePath=path.join(process.cwd(), 'app','data','data.json')
+        fs.readFile(filePath, 'utf8', (err, data) => {
             if (err) {
-                return responseHelper.badRequestError(res, 'File reading error')
+                return responseHelper.badRequestError(res, responseMessageHelper.heartBeat.ERROR)
             }
             const jsonData = JSON.parse(data);
             const processedData = heartRateHelper.processBatch(jsonData, batchSize);
-            return responseHelper.success(res, 'Aggregated Heart Rate', processedData)
+            return responseHelper.success(res, responseMessageHelper.heartBeat.SUCCESS, processedData)
         })
     }
     catch (error) {

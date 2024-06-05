@@ -9,6 +9,7 @@ const indexRouter=require('./routes')
 const port = config.port
 const db=require('./db/config')
 const rateLimiter = require('./middlewares/ratelimiter.middleware');
+const validateImage=require('./middlewares/mutler.middleware')
 
 const app = express();
 app.use(helmet());
@@ -21,6 +22,8 @@ app.use(rateLimiter);
 
 app.use('/',indexRouter);
 app.use('/public', express.static(path.join(__dirname, '/public')));
+app.use(validateImage);
+
 app.listen(port, function () {
   console.log('App listening on port '+ port);
   logger.info('App listening on port ')
