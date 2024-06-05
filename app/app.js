@@ -10,7 +10,7 @@ const port = config.port
 const db=require('./db/config')
 const rateLimiter = require('./middlewares/ratelimiter.middleware');
 const validateImage=require('./middlewares/mutler.middleware')
-
+const heartRate=require('./models/heartrate.model')
 const app = express();
 app.use(helmet());
 app.use(cors());

@@ -5,7 +5,8 @@ const heartrate = db.sequelize.define(
     'heartrate', {
     id: { type: DataTypes.BIGINT, autoIncrement: true, primaryKey: true },
     status: { type: DataTypes.STRING(100) },
-    data: { type: DataTypes.JSON()}
+    data: { type: DataTypes.JSON()},
+    patient_id: { type: DataTypes.STRING(100) }
 }, {
     paranoid: true,
     timestamps: true,
