@@ -6,7 +6,6 @@ const logger = require('../../utils/logger');
 const batchSize = 100;
 const path = require('path');
 const hearRateService=require('../heartrate/heartrate.service');
-const { json } = require('sequelize');
 
 module.exports.processHeartRateData = (req, res) => {
     try {
