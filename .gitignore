@@ -10,4 +10,5 @@ package-lock.json
 logs
 
 .env
-data.json
+
+app/data/data.json
