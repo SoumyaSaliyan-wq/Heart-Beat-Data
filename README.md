@@ -1,4 +1,4 @@
-# Process Hear Rate Data
+# Process Heart Rate Data
 
 # Installation
     - git clone https://github.com/SoumyaSaliyan-wq/caremonitor.git
