@@ -8,7 +8,7 @@
     - Configure the PORT ,DB Details
 
 # Development
-- To run the process locally "npm start".Server will run at "localhost:<PORT>"
+- To run the process locally "npm start".Server will run at "localhost:[PORT]"
 
 # Production
 - "pm2 start server.js --name=app" - To start the server 
