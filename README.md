@@ -5,9 +5,10 @@
     - Navigate to the root folder and install npm packages using command  "npm i "
     - Configure .env variables as per the deployment environment [development, production,staging].Please refer the sample 
     env file for more information
+    - Configure the PORT ,DB Details
 
 # Development
-- To run the process locally "npm start".Server will run at "localhost:3011"
+- To run the process locally "npm start".Server will run at "localhost:<PORT>"
 
 # Production
 - "pm2 start server.js --name=app" - To start the server 
