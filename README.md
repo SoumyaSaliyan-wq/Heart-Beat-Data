@@ -7,7 +7,7 @@
     env file for more information
 
 # Development
-- To run the process locally "npm start"
+- To run the process locally "npm start".Server will run at "localhost:3011"
 
 # Production
 - "pm2 start server.js --name=app" - To start the server 
