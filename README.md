@@ -13,7 +13,7 @@
 - "pm2 start server.js --name=app" - To start the server 
 - "pm2 ls" - To check the server status
 
-# Hear Rate 
+# Heart Rate 
 - POST {{SERVER}}/heart-rate/ - Accepts a .json file(since the payload will be large) which contains the metrics
 
     curl --location '{{SERVER}}/heart-rate' \
