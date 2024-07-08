@@ -1,7 +1,7 @@
 # Process Heart Rate Data
 
 # Installation
-    - git clone https://github.com/SoumyaSaliyan-wq/caremonitor.git
+    - https://github.com/SoumyaSaliyan-wq/Heart-Beat-Data.git
     - Navigate to the root folder and install npm packages using command  "npm i "
     - Configure .env variables as per the deployment environment [development, production,staging].Please refer the sample 
     env file for more information
